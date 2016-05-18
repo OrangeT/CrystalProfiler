@@ -5,10 +5,13 @@ namespace CrystalProfiler
 {
     class Options
     {
-        [Option('p', "params")]
+        [Option('h', "help", HelpText = "Show This Help Message")]
+        public bool Help { get; set; }
+
+        [Option('p', "params", HelpText = "List Parameters")]
         public bool ListParameters { get; set; }
 
-        [Option('a', "all")]
+        [Option('a', "all", HelpText = "Show All")]
         public bool All { get; set; }
 
         [ValueList(typeof(List<string>))]

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using CommandLine;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace CrystalProfiler
 {
@@ -23,6 +25,26 @@ namespace CrystalProfiler
 
                 foreach (var file in options.InputFilenames)
                 {
+                    try
+                    {
+                        var profile = new CrystalProfile(file);
+
+                        Utility.WriteHeading("Filename: " + Path.GetFileName(file));
+
+                        if (options.All || options.ListParameters)
+                        {
+                            Utility.WriteSubHeading("Parameters");
+                            profile.Parameters.ToList().ForEach(Console.WriteLine);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error while attempting to process file: {0}, exception: {1}",
+                            file, 
+                            ex.Message);
+                    }
+
+                    Console.WriteLine();
                 }
             }
         }
