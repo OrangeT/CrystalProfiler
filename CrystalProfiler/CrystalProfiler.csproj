@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalConnectionString.cs" />
     <Compile Include="CrystalProfile.cs" />
     <Compile Include="CrystalProfileParameter.cs" />
     <Compile Include="Extensions.cs" />

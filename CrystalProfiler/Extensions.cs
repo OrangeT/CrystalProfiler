@@ -18,7 +18,6 @@ namespace CrystalProfiler
             Console.WriteLine();
             Console.WriteLine(message);
             Console.WriteLine(new string('=', length));
-            Console.WriteLine();
         }
 
         public static void WriteSubHeading(string message)
@@ -28,6 +27,7 @@ namespace CrystalProfiler
 
             var length = message.Length;
 
+            Console.WriteLine();
             Console.WriteLine(message);
             Console.WriteLine(new string('-', length));
         }

@@ -30,5 +30,15 @@ namespace CrystalProfiler
                     .Select(field => new CrystalProfileParameter(field));
             }
         }
+
+        public IEnumerable<CrystalConnectionString> ConnectionStrings
+        {
+            get
+            {
+                return _doc.DataSourceConnections
+                    .Cast<IConnectionInfo>()
+                    .Select(connection => new CrystalConnectionString(connection));
+            }
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace CrystalProfiler
         [Option('p', "params", HelpText = "List Parameters")]
         public bool ListParameters { get; set; }
 
+        [Option('c', "connections", HelpText = "List Connection Strings")]
+        public bool ConnectionStrings { get; set; }
+
         [Option('a', "all", HelpText = "Show All")]
         public bool All { get; set; }
 

@@ -36,6 +36,12 @@ namespace CrystalProfiler
                             Utility.WriteSubHeading("Parameters");
                             profile.Parameters.ToList().ForEach(Console.WriteLine);
                         }
+
+                        if (options.All || options.ConnectionStrings)
+                        {
+                            Utility.WriteSubHeading("Connection Strings");
+                            profile.ConnectionStrings.ToList().ForEach(Console.WriteLine);
+                        }
                     }
                     catch (Exception ex)
                     {
