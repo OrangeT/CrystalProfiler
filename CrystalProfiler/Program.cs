@@ -6,6 +6,7 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using CommandLine;
+using CommandLine.Text;
 using CrystalDecisions.CrystalReports.Engine;
 
 namespace CrystalProfiler
@@ -17,6 +18,11 @@ namespace CrystalProfiler
             var options = new Options();
             if (Parser.Default.ParseArguments(args, options))
             {
+                if (!options.Any() || options.Help)
+                {
+                    Console.WriteLine(HelpText.AutoBuild(options));
+                }
+
                 if (!options.InputFilenames.Any())
                 {
                     Console.Error.WriteLine("Must provide at least one filename");

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CrystalProfiler")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Returns properties of crystal reports.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Orange Tentacle")]
 [assembly: AssemblyProduct("CrystalProfiler")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © 2016 Orange Tentacle")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
